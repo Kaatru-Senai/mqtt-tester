@@ -1,0 +1,19 @@
+version: '1.0'
+
+services:
+
+  mqtt-tester:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    links:
+      - "mqtt-broker:broker"
+
+  mqtt-broker:
+    image: eclipse-mosquitto
+    restart: always
+    volumes:
+      - ./mosquitto:/mosquitto/config
+    ports:
+      - 1883:1883
+
