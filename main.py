@@ -57,14 +57,12 @@ def gen_data():
     "rh": random.randint(0, 100)
   }
 
-print('running')
 pid_ = 0
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
 topic = 'mqtt/test'
 
-print('running')
 client.connect("broker", 1883, 60)
 
 client.loop_forever()
