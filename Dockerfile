@@ -8,4 +8,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY main.py ./
 
+COPY streamer.py ./
+
 ENTRYPOINT ["python3", "main.py"]
