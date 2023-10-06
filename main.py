@@ -14,15 +14,16 @@ def start_loop():
             'lat': bus_waypoints[i][1],
             'long': bus_waypoints[i][0]
         })
-        if randomizer:
-            i -= 1
-            randomizer = False
-            print('INFO: Going backwards')
-        else:
-            i += 1
-            if i % 30 == 0:
-                randomizer = True
-            print('INFO: Going forwards')
+        i += 1
+        # if randomizer:
+        #     i -= 1
+        #     randomizer = False
+        #     print('INFO: Going backwards')
+        # else:
+        #     i += 1
+        #     if i % 30 == 0:
+        #         randomizer = True
+        #     print('INFO: Going forwards')
         time.sleep(5)
 
 
